@@ -1,4 +1,4 @@
-css-tokens
+CSS-Tokens
 ==========
 
-a tools can parse css text to css tokens
+>A tools can parse css text to css tokens
