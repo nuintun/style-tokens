@@ -1,10 +1,9 @@
-specs := $(shell find ./tests -name '*-tests.js' ! -path "*node_modules/*")
-reporter = spec
-test:
-	@node_modules/.bin/mocha --reporter ${reporter} ${specs}
-	
 clean:
 	@rm -fr _site
+	
+runner = _site/tests/runner.html
+test:
+	@mocha-browser ${runner} -S
 	
 output = _site/coverage.html
 coverage:
@@ -13,4 +12,4 @@ coverage:
 	@mocha-browser ${runner}?cov -S -R html-cov > ${output}
 	@echo "Build coverage to ${output}"
 
-.PHONY: test clean coverage
+.PHONY: clean test coverage
