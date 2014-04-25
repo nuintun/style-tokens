@@ -13,4 +13,8 @@ describe('Tokens', function (){
     it('should has token type exports and exports is object', function (){
         Tokens.TokenType.should.be.type('object');
     });
+
+    it('should has token type exports and exports is object', function (){
+        Tokens.TokenType.should.be.type('object');
+    });
 });
