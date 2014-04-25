@@ -4,7 +4,7 @@ Style-Tokens
 >A tools can parse css text to css tokens
 
 >[![Build Status](https://travis-ci.org/Nuintun/style-tokens.svg?branch=master)](https://travis-ci.org/Nuintun/style-tokens)
->[![Coverage Status](https://coveralls.io/repos/Nuintun/css-tokens/badge.png)](https://coveralls.io/r/Nuintun/css-tokens)
+>[![Coverage Status](https://coveralls.io/repos/Nuintun/style-tokens/badge.png?branch=master)](https://coveralls.io/r/Nuintun/style-tokens?branch=master)
 
 ###Reference : 
 >Modify from csso: [https://github.com/css/csso](https://github.com/css/csso)
