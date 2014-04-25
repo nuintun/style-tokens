@@ -1,27 +1,16 @@
-all:
-	@npm install -d
-
 specs := $(shell find ./tests -name '*-tests.js' ! -path "*node_modules/*")
 reporter = spec
 test:
 	@node_modules/.bin/mocha --reporter ${reporter} ${specs}
-
-out = _site/coverage.html
-coverage:
-	@rm -rf lib-cov
-	@jscoverage lib lib-cov
-	@CMD_COVERAGE=1 $(MAKE) test reporter=html-cov > ${out}
-	@rm -rd lib-cov
-	@echo
-	@echo "Built Report to ${out}"
-	@echo
-
-coveralls:
-	@node_modules/.bin/jscoverage lib lib-cov
-	@CMD_COVERAGE=1 $(MAKE) test reporter=mocha-lcov-reporter | node_modules/.bin/coveralls
-	@rm -rf lib-cov
-
+	
 clean:
 	@rm -fr _site
+	
+output = _site/coverage.html
+coverage:
+	@rm -fr _site/src-cov
+	@jscoverage --encoding=utf8 src _site/src-cov
+	@mocha-browser ${runner}?cov -S -R html-cov > ${output}
+	@echo "Build coverage to ${output}"
 
-.PHONY: all build test coverage
+.PHONY: test clean coverage
