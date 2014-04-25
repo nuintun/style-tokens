@@ -24,4 +24,4 @@ coveralls:
 clean:
 	@rm -fr _site
 
-.PHONY: all build test lint coverage
+.PHONY: all build test coverage
