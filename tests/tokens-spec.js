@@ -2,8 +2,10 @@
  * Created by Newton on 2014/4/25.
  */
 var fs = require('fs'),
+    path = require('path'),
     should = require('should'),
     libdir = process.env.CMD_COVERAGE ? '../lib-cov' : '../lib',
+    assetsdir = path.join(__dirname, 'assets'),
     Tokens = require(libdir + '/tokens'),
     TokenType = require(libdir + '/token-type');
 
@@ -26,8 +28,8 @@ describe('Tokens', function (){
     });
 
     it('base.css\'s tokens should be equal base.json', function (){
-        var basecss = fs.readFileSync('./assets/base.css', 'utf8'),
-            basejson = fs.readFileSync('./assets/base.json', 'utf8'),
+        var basecss = fs.readFileSync(path.join(assetsdir, 'base.css'), 'utf8'),
+            basejson = fs.readFileSync(path.join(assetsdir, 'base.json'), 'utf8'),
             tokens = new Tokens(basecss);
 
         should.deepEqual(tokens, JSON.parse(basejson));
