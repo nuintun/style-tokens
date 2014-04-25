@@ -11,7 +11,7 @@ Css-Tokens
 
 ###Install
 ```
-$ npm install node-adodb
+$ npm install css-tokens
 ```
 
 ###Introduction:
