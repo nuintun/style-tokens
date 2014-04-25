@@ -5,3 +5,12 @@ node_modules
 
 # WebStorm
 .idea
+
+# github
+.gitignore
+
+# npm
+.npmignore
+
+# travis
+.travis.yml
