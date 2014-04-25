@@ -3,10 +3,11 @@
  */
 var fs = require('fs'),
     should = require('should'),
-    Tokens = require(process.env.CMD_COVERAGE ? '../lib-cov/tokens' : '../lib/tokens');
+    libdir = process.env.CMD_COVERAGE ? '../lib-cov' : '../lib',
+    Tokens = require(libdir + '/tokens');
 
 describe('Tokens', function (){
-    it('should has parse exports and exports is function', function (){
-        Tokens.should.be.type('function');
+    it('empty should return []', function (){
+        (new Tokens('')).should.be.type('array');
     });
 });
