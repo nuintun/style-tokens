@@ -5,8 +5,8 @@ var Tokens = require('./lib/tokens'),
     TokenType = require('./lib/token-type');
 
 module.exports = {
-    Parse: function (css, options){
-        return new Tokens(css, options);
+    Parse: function (css){
+        return new Tokens(css);
     },
     TokenType: TokenType
 };
