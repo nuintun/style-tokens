@@ -3,18 +3,10 @@
  */
 var fs = require('fs'),
     should = require('should'),
-    Tokens = require('../index');
+    Tokens = require(process.env.CMD_COVERAGE ? '../lib-cov/tokens' : '../lib/tokens');
 
 describe('Tokens', function (){
     it('should has parse exports and exports is function', function (){
-        Tokens.Parse.should.be.type('function');
-    });
-
-    it('should has token type exports and exports is object', function (){
-        Tokens.TokenType.should.be.type('object');
-    });
-
-    it('should has token type exports and exports is object', function (){
-        Tokens.TokenType.should.be.type('object');
+        Tokens.should.be.type('function');
     });
 });
