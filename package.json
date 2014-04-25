@@ -28,6 +28,12 @@
         "url": "https://github.com/nuintun/css-tokens.git"
     },
     "dependencies": {},
-    "devDependencies": {},
-    "readmeFilename": "README.md"
+    "devDependencies": {
+        "mocha": ">=1.18.2",
+        "should": ">=3.3.1"
+    },
+    "readmeFilename": "README.md",
+    "scripts": {
+        "test": "make test"
+    }
 }
