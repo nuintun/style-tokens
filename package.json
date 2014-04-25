@@ -1,0 +1,33 @@
+{
+    "name": "css-tokens",
+    "version": "0.0.1",
+    "main": "index.js",
+    "license": "MIT",
+    "keywords": [
+        "css",
+        "ast",
+        "tokens",
+        "parse",
+        "parser"
+    ],
+    "homepage": "https://github.com/nuintun/css-tokens",
+    "description": "A tools can parse css text to css tokens .",
+    "author": {
+        "name": "Nuintun",
+        "email": "<nuintun@qq.com>"
+    },
+    "bugs": {
+        "url": "https://github.com/nuintun/css-tokens/issues",
+        "email": "nuintun@qq.com"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nuintun/css-tokens.git"
+    },
+    "dependencies": {},
+    "devDependencies": {},
+    "readmeFilename": "README.md"
+}
