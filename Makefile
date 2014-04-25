@@ -1,7 +1,7 @@
 all:
 	@npm install -d
 
-specs := $(shell find ./tests -name '*.tests.js' ! -path "*node_modules/*")
+specs := $(shell find ./tests -name '*-tests.js' ! -path "*node_modules/*")
 reporter = spec
 test:
 	@node_modules/.bin/mocha --reporter ${reporter} ${specs}
