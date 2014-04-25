@@ -2,5 +2,13 @@ language: node_js
 node_js:
   - 0.8
 
+install:
+  - npm install mocha-browser
+  
+script:
+  - node_modules/.bin/mocha-browser _site/tests/runner.html -S
+
 after_success:
-  - make coveralls
+  - npm install jscoverage coveralls
+  - node_modules/.bin/jscoverage --encoding=utf8 src _site/src-cov
+  - node_modules/.bin/mocha-browser _site/tests/runner.html?cov -S -R lcov | node_modules/.bin/coveralls
