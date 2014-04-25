@@ -1,4 +1,4 @@
-Css-Tokens
+Style-Tokens
 ==========
 
 >A tools can parse css text to css tokens
@@ -11,7 +11,7 @@ Css-Tokens
 
 ###Install
 ```
-$ npm install css-tokens
+$ npm install style-tokens
 ```
 
 ###Introduction:
@@ -19,7 +19,7 @@ $ npm install css-tokens
 
 ```js
 var tokens,
-    Tokens = require('tokens'),
+    Tokens = require('style-tokens'),
     csstext = '/* base.css */body { color: red; }';
 
 tokens = Tokens.Parse(csstext); // parse css
