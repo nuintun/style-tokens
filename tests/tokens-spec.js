@@ -27,9 +27,17 @@ describe('Tokens', function (){
         tokens.length.should.equal(0);
     });
 
-    it('base.css\'s tokens should be equal base.json', function (){
-        var basecss = fs.readFileSync(path.join(assetsdir, 'base.css'), 'utf8'),
-            basejson = fs.readFileSync(path.join(assetsdir, 'base.json'), 'utf8'),
+    it('compressed.css\'s tokens should be equal compressed.json', function (){
+        var basecss = fs.readFileSync(path.join(assetsdir, 'compressed.css'), 'utf8'),
+            basejson = fs.readFileSync(path.join(assetsdir, 'compressed.json'), 'utf8'),
+            tokens = new Tokens(basecss);
+
+        should.deepEqual(tokens, JSON.parse(basejson));
+    });
+
+    it('uncompressed.css\'s tokens should be equal uncompressed.json', function (){
+        var basecss = fs.readFileSync(path.join(assetsdir, 'uncompressed.css'), 'utf8'),
+            basejson = fs.readFileSync(path.join(assetsdir, 'uncompressed.json'), 'utf8'),
             tokens = new Tokens(basecss);
 
         should.deepEqual(tokens, JSON.parse(basejson));
