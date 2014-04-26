@@ -14,8 +14,8 @@
     },
     {
         "index": 1,
-        "type": "Enter",
-        "value": "\r",
+        "type": "Newline",
+        "value": "\n",
         "start": {
             "line": 1,
             "column": 15
@@ -27,19 +27,6 @@
     },
     {
         "index": 2,
-        "type": "Newline",
-        "value": "\n",
-        "start": {
-            "line": 1,
-            "column": 16
-        },
-        "end": {
-            "line": 1,
-            "column": 16
-        }
-    },
-    {
-        "index": 3,
         "type": "Identifier",
         "value": "body",
         "start": {
@@ -52,7 +39,7 @@
         }
     },
     {
-        "index": 4,
+        "index": 3,
         "type": "Space",
         "value": " ",
         "start": {
@@ -65,7 +52,7 @@
         }
     },
     {
-        "index": 5,
+        "index": 4,
         "type": "LeftCurlyBracket",
         "value": "{",
         "start": {
@@ -76,36 +63,23 @@
             "line": 2,
             "column": 6
         },
-        "right": 16
+        "right": 13
     },
     {
-        "index": 6,
-        "type": "Enter",
-        "value": "\r",
-        "start": {
-            "line": 2,
-            "column": 7
-        },
-        "end": {
-            "line": 2,
-            "column": 7
-        }
-    },
-    {
-        "index": 7,
+        "index": 5,
         "type": "Newline",
         "value": "\n",
         "start": {
             "line": 2,
-            "column": 8
+            "column": 7
         },
         "end": {
             "line": 2,
-            "column": 8
+            "column": 7
         }
     },
     {
-        "index": 8,
+        "index": 6,
         "type": "Space",
         "value": "    ",
         "start": {
@@ -118,7 +92,7 @@
         }
     },
     {
-        "index": 9,
+        "index": 7,
         "type": "Identifier",
         "value": "color",
         "start": {
@@ -131,7 +105,7 @@
         }
     },
     {
-        "index": 10,
+        "index": 8,
         "type": "Colon",
         "value": ":",
         "start": {
@@ -144,7 +118,7 @@
         }
     },
     {
-        "index": 11,
+        "index": 9,
         "type": "Space",
         "value": " ",
         "start": {
@@ -157,7 +131,7 @@
         }
     },
     {
-        "index": 12,
+        "index": 10,
         "type": "Identifier",
         "value": "red",
         "start": {
@@ -170,7 +144,7 @@
         }
     },
     {
-        "index": 13,
+        "index": 11,
         "type": "Semicolon",
         "value": ";",
         "start": {
@@ -183,33 +157,20 @@
         }
     },
     {
-        "index": 14,
-        "type": "Enter",
-        "value": "\r",
-        "start": {
-            "line": 3,
-            "column": 16
-        },
-        "end": {
-            "line": 3,
-            "column": 16
-        }
-    },
-    {
-        "index": 15,
+        "index": 12,
         "type": "Newline",
         "value": "\n",
         "start": {
             "line": 3,
-            "column": 17
+            "column": 16
         },
         "end": {
             "line": 3,
-            "column": 17
+            "column": 16
         }
     },
     {
-        "index": 16,
+        "index": 13,
         "type": "RightCurlyBracket",
         "value": "}",
         "start": {
@@ -220,6 +181,6 @@
             "line": 4,
             "column": 1
         },
-        "left": 5
+        "left": 4
     }
 ]
