@@ -1,3 +1,7 @@
+jsfiles := $(shell find ./ -name '*.js' ! -path "*node_modules/*");
+lint:
+	@./node_modules/.bin/jshint ${jsfiles}
+
 specs := $(shell find ./tests -name '*-spec.js' ! -path "*node_modules/*")
 reporter = spec
 test:
@@ -21,4 +25,4 @@ coveralls:
 	@CMD_COVERAGE=1 $(MAKE) test reporter=mocha-lcov-reporter | node_modules/.bin/coveralls
 	@rm -rf lib-cov
 
-.PHONY: test clean coverage
+.PHONY: lint test clean coverage
