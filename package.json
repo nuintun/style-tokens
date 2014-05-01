@@ -34,8 +34,8 @@
     "devDependencies": {
         "mocha": ">=1.18.2",
         "should": ">=3.3.1",
-        "coveralls": "~2.0.7",
-        "jscoverage": "~0.3.6",
+        "coveralls": "~2.10.0",
+        "jscoverage": "~0.3.8",
         "mocha-lcov-reporter": "~0.0.1"
     },
     "readmeFilename": "README.md",
