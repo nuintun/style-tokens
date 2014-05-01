@@ -15,5 +15,11 @@ node_modules
 # travis
 .travis.yml
 
+# tests
+tests
+
+# makefile
+Makefile
+
 # js lint
 .jshintrc
