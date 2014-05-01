@@ -6,6 +6,7 @@ Style-Tokens
 >[![Build Status](https://travis-ci.org/Nuintun/style-tokens.svg?branch=master)](https://travis-ci.org/Nuintun/style-tokens)
 >[![Coverage Status](https://coveralls.io/repos/Nuintun/style-tokens/badge.png?branch=master)](https://coveralls.io/r/Nuintun/style-tokens?branch=master)
 >[![NPM version](https://badge.fury.io/js/style-tokens.png)](https://www.npmjs.org/package/style-tokens)
+>[![Dependency Status](https://david-dm.org/Nuintun/style-tokens.png)](https://david-dm.org/Nuintun/style-tokens)
 
 ###Reference : 
 >Modify from csso: [https://github.com/css/csso](https://github.com/css/csso)
