@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Style-tokens by nuintun</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/nuintun/style-tokens">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/nuintun/style-tokens/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/nuintun/style-tokens/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Style-tokens</h1>
+          <p>A tools can parse css text to css tokens</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/nuintun">nuintun</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a id="style-tokens" class="anchor" href="#style-tokens" aria-hidden="true"><span class="octicon octicon-link"></span></a>style-tokens</h1>
+
+<blockquote>
+<p>A tools can parse css text to css tokens</p>
+
+<p><a href="https://www.npmjs.org/package/style-tokens"><img src="http://img.shields.io/npm/v/style-tokens.svg?style=flat-square" alt="NPM Version"></a>
+<a href="https://www.npmjs.org/package/style-tokens"><img src="http://img.shields.io/npm/dm/style-tokens.svg?style=flat-square" alt="Download Status"></a>
+<a href="https://travis-ci.org/nuintun/style-tokens"><img src="http://img.shields.io/travis/nuintun/style-tokens.svg?style=flat-square" alt="Travis Status"></a>
+<a href="https://coveralls.io/r/nuintun/style-tokens?branch=master"><img src="http://img.shields.io/coveralls/nuintun/style-tokens/master.svg?style=flat-square" alt="Test Coverage"></a>
+<a href="https://david-dm.org/nuintun/style-tokens"><img src="http://img.shields.io/david/nuintun/style-tokens.svg?style=flat-square" alt="Dependencies"></a></p>
+</blockquote>
+
+<h3>
+<a id="reference-" class="anchor" href="#reference-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference :</h3>
+
+<blockquote>
+<p>Modify from csso: <a href="https://github.com/css/csso">https://github.com/css/csso</a></p>
+</blockquote>
+
+<h3>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h3>
+
+<pre><code>$ npm install style-tokens
+</code></pre>
+
+<h3>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction:</h3>
+
+<blockquote>
+<p>Use:</p>
+</blockquote>
+
+<div class="highlight highlight-js"><pre><span class="pl-k">var</span> tokens,
+  Tokens <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>style-tokens<span class="pl-pds">'</span></span>),
+  csstext <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>/* base.css */body { color: red; }<span class="pl-pds">'</span></span>;
+
+tokens <span class="pl-k">=</span> Tokens.Parse(csstext); <span class="pl-c">// parse css</span>
+
+<span class="pl-en">console</span><span class="pl-c1">.log</span>(Tokens.TokenType); <span class="pl-c">// all tokens's type, the value is readonly</span>
+
+<span class="pl-en">console</span><span class="pl-c1">.log</span>(tokens);</pre></div>
+
+<blockquote>
+<p>Tokens output:</p>
+</blockquote>
+
+<div class="highlight highlight-js"><pre>[
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">0</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>CommentML<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>value<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>/* base.css */<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>end<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">14</span>
+    }
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Identifier<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>value<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>body<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">15</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>end<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">18</span>
+    }
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">2</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Space<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>value<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">19</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>end<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">19</span>
+    }
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">3</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>LeftCurlyBracket<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>value<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>{<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">20</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>end<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">20</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>right<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">11</span>
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">4</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Space<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>value<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">21</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>end<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">21</span>
+    }
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">5</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Identifier<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>value<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>color<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">22</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>end<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">26</span>
+    }
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">6</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Colon<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>value<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>:<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">27</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>end<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">27</span>
+    }
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">7</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Space<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>value<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">28</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>end<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">28</span>
+    }
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">8</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Identifier<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>value<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>red<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">29</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>end<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">31</span>
+    }
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">9</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Semicolon<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>value<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>;<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">32</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>end<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">32</span>
+    }
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">10</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Space<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>value<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">33</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>end<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">33</span>
+    }
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">11</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>RightCurlyBracket<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>value<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>}<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">34</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>end<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">"</span>line<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">1</span>,
+      <span class="pl-s"><span class="pl-pds">"</span>column<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">34</span>
+    },
+    <span class="pl-s"><span class="pl-pds">"</span>left<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">3</span>
+  }
+]</pre></div>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
