@@ -81,14 +81,14 @@
   {
     "index": 6,
     "type": "Space",
-    "value": "    ",
+    "value": "  ",
     "start": {
       "line": 3,
       "column": 1
     },
     "end": {
       "line": 3,
-      "column": 4
+      "column": 2
     }
   },
   {
@@ -97,11 +97,11 @@
     "value": "color",
     "start": {
       "line": 3,
-      "column": 5
+      "column": 3
     },
     "end": {
       "line": 3,
-      "column": 9
+      "column": 7
     }
   },
   {
@@ -110,11 +110,11 @@
     "value": ":",
     "start": {
       "line": 3,
-      "column": 10
+      "column": 8
     },
     "end": {
       "line": 3,
-      "column": 10
+      "column": 8
     }
   },
   {
@@ -123,11 +123,11 @@
     "value": " ",
     "start": {
       "line": 3,
-      "column": 11
+      "column": 9
     },
     "end": {
       "line": 3,
-      "column": 11
+      "column": 9
     }
   },
   {
@@ -136,11 +136,11 @@
     "value": "red",
     "start": {
       "line": 3,
-      "column": 12
+      "column": 10
     },
     "end": {
       "line": 3,
-      "column": 14
+      "column": 12
     }
   },
   {
@@ -149,11 +149,11 @@
     "value": ";",
     "start": {
       "line": 3,
-      "column": 15
+      "column": 13
     },
     "end": {
       "line": 3,
-      "column": 15
+      "column": 13
     }
   },
   {
@@ -162,11 +162,11 @@
     "value": "\n",
     "start": {
       "line": 3,
-      "column": 16
+      "column": 14
     },
     "end": {
       "line": 3,
-      "column": 16
+      "column": 14
     }
   },
   {
