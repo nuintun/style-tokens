@@ -1,46 +1,43 @@
 {
-    "name": "style-tokens",
-    "version": "0.1.0",
-    "main": "index.js",
-    "license": "MIT",
-    "keywords": [
-        "css",
-        "ast",
-        "token",
-        "style",
-        "parse",
-        "parser",
-        "tokens",
-        "stylesheet"
-    ],
-    "homepage": "https://github.com/nuintun/style-tokens",
-    "description": "A tools can parse css text to css tokens .",
-    "author": {
-        "name": "Nuintun",
-        "email": "<nuintun@qq.com>"
-    },
-    "bugs": {
-        "url": "https://github.com/nuintun/style-tokens/issues",
-        "email": "nuintun@qq.com"
-    },
-    "engines": {
-        "node": ">=0.8.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/nuintun/style-tokens.git"
-    },
-    "dependencies": {},
-    "devDependencies": {
-        "jshint": "*",
-        "mocha": ">=1.18.2",
-        "should": ">=3.3.1",
-        "coveralls": "~2.10.0",
-        "jscoverage": "~0.3.8",
-        "mocha-lcov-reporter": "~0.0.1"
-    },
-    "readmeFilename": "README.md",
-    "scripts": {
-        "test": "make test"
-    }
+  "name": "style-tokens",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "ast",
+    "token",
+    "style",
+    "parse",
+    "parser",
+    "tokens",
+    "stylesheet"
+  ],
+  "homepage": "https://github.com/nuintun/style-tokens",
+  "description": "A tools can parse css text to css tokens .",
+  "author": {
+    "name": "nuintun",
+    "email": "<nuintun@qq.com>"
+  },
+  "bugs": {
+    "url": "https://github.com/nuintun/style-tokens/issues",
+    "email": "nuintun@qq.com"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nuintun/style-tokens.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "should": "^6.0.1"
+  },
+  "readmeFilename": "README.md",
+  "scripts": {
+    "test": "mocha --check-leaks --reporter spec --bail",
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks --reporter spec",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks --reporter dot"
+  }
 }
