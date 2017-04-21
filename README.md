@@ -1,5 +1,4 @@
-style-tokens
-==========
+# style-tokens
 
 >A tools can parse css text to css tokens
 >
