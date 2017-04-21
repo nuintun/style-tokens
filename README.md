@@ -9,15 +9,15 @@ style-tokens
 >[![Test Coverage][coveralls-image]][coveralls-url]
 >[![Dependencies][david-image]][david-url]
 
-###Reference : 
+### Reference : 
 >Modify from csso: [https://github.com/css/csso](https://github.com/css/csso)
 
-###Install
+### Install
 ```
 $ npm install style-tokens
 ```
 
-###Introduction:
+### Introduction:
 >Use:
 
 ```js
